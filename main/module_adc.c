@@ -64,7 +64,7 @@ static duk_ret_t js_adc_config_width(duk_context *ctx) {
 static duk_ret_t js_adc_get_voltage(duk_context *ctx) {
 	LOGD(">> js_adc_get_voltage");
 	adc1_channel_t channel = duk_get_int(ctx, -1);
-	int value = adc1_get_voltage(channel);
+	int value = adc1_get_raw(channel);
 	duk_push_int(ctx, value);
 	LOGD("<< js_adc_get_voltage");
 	return 1;
