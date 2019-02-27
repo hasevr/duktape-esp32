@@ -4,8 +4,9 @@
 #
 
 PROJECT_NAME := esp32-duktape
-
+CFLAGS += -DESP_PLATFORM
 include $(IDF_PATH)/make/project.mk
+
 
 #
 # Build the files for shipping.
